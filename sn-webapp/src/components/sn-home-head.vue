@@ -27,6 +27,7 @@
         display: flex;
         background-image: url("../assets/images/157260181257313287.png");
         background-repeat: no-repeat;
+        background-size: 100%;
         height: 0.5rem;
         font-size: 0.16rem;
         position: fixed;
@@ -54,7 +55,9 @@
         margin-top: 0.07rem;
         box-sizing: border-box;
         padding-left: 0.3rem;
-        background: rgba(255,255,255,0.7);
+        background: url("../assets/images/search.png") rgba(255,255,255,0.7) no-repeat 0.03rem 0.05rem;
+        background-size: 0.25rem 0.25rem;
+
     }
     .sn-home-head-login{
         width: 15%;

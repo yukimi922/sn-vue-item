@@ -3,6 +3,7 @@
         <a href="#" class="sn-sort-back"></a>
         <div class="sn-sort-search">
             <a href="#"></a>
+            <a href="#">搜索商品或店铺</a>
         </div>
     </div>
 </template>
@@ -42,14 +43,24 @@
         border: 0.01rem solid #E7E7E7;
         background-color: white;
     }
-    .sn-sort-search a{
+    .sn-sort-search a:nth-child(1){
         display: block;
         position: absolute;
         width: 0.2rem;
         height: 0.2rem;
-        background-color: pink;
         left: 0.1rem;
         top: 0.08rem;
-        background-image: url("");
+        background-image: url(".././assets/images/search.png");
+        background-repeat: no-repeat;
+        background-size: 0.2rem 0.2rem;
+    }
+    .sn-sort-search a:nth-child(2){
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        left: 0.4rem;
+        top: 0.1rem;
+        color: #D5D5D5;
+        font-size: 0.14rem;
     }
 </style>

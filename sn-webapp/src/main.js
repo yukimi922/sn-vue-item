@@ -8,6 +8,10 @@ Vue.config.productionTip = false;
 
 Vue.use(VueRouter)
 
+let bus = new Vue()
+
+Vue.prototype.$bus = bus
+
 new Vue({
   router,
  render: h => h(App),

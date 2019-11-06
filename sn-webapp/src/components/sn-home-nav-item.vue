@@ -20,6 +20,7 @@
         height: 0.75rem;
         font-size: 0.10rem;
         color: #6F6F6F;
+        text-align: center;
     }
     .nav-img{
         width: 0.46rem;
