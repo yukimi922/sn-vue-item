@@ -15,7 +15,6 @@
 <style scoped>
     .sn-home-nav-item{
         float: left;
-        /*width: 0.75rem;*/
         width: 20%;
         height: 0.75rem;
         font-size: 0.10rem;

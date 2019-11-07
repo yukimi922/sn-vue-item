@@ -2,7 +2,7 @@
     <div>
         <li :key="i" v-for="(n,i) in data">
             <img src="" alt=""><br>
-            <p>{{}}</p>
+            <p>{{n.id}}</p>
         </li>
     </div>
 </template>

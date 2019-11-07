@@ -31,7 +31,7 @@
     .sn-sort-goodsPage{
         width: 2.8rem;
         height: 6rem;
-        background-color: darkcyan;
+        /*background-color: darkcyan;*/
         margin: 0.5rem 0 0 0.95rem;
     }
     .sn-sort-poster{

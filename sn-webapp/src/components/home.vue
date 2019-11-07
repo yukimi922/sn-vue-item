@@ -6,7 +6,7 @@
         <sn-post-top :data="posterTop"></sn-post-top>
         <sn-home-poster :data="posterInfo"></sn-home-poster>
         <sn-home-new-user :data="newsInfo"></sn-home-new-user>
-        <sn-footer :data="footInfo"></sn-footer>
+<!--        <sn-footer :data="footInfo"></sn-footer>-->
     </div>
 </template>
 
@@ -16,7 +16,7 @@
     import snSwp from './sn-swp'
     import snHomePoster from './sn-home-poster'
     import snPostTop from './sn-poster-top'
-    import snFooter from './sn-footer'
+    // import snFooter from './sn-footer'
     import snHomeNewUser from './sn-home-newUser'
     import navInfo from "./navInfo"
 
@@ -24,7 +24,7 @@
         name: "home",
         components: {
             // eslint-disable-next-line vue/no-unused-components
-            snHomeHead,snHomeNav,snSwp,snHomePoster,snPostTop,snFooter,snHomeNewUser,navInfo
+            snHomeHead,snHomeNav,snSwp,snHomePoster,snPostTop,snHomeNewUser,navInfo
         },
         data(){
             return {
@@ -128,34 +128,34 @@
                     }
                 ],
                 posterTop:{src:'./images/157277896810687787.png'},
-                footInfo: [
-                    {
-                        id: 0,
-                        title: '猜你喜欢',
-                        src: './images/154518776962642834.png'
-                    },
-                    {
-                        id: 1,
-                        title: '分类',
-                        src: './images/154518777766983546.png'
-                    },
-                    {
-                        id: 2,
-                        title: '必抢清单',
-                        src: './images/154518778584812163.png'
-                    },
-                    {
-                        id: 3,
-                        title: '购物车',
-                        src: './images/154518779385872504.png'
-                    },
-                    {
-                        id: 4,
-                        title: '我的易购',
-                        src: './images/154518780211077845.png'
-                    },
-
-                ],
+                // footInfo: [
+                //     {
+                //         id: 0,
+                //         title: '猜你喜欢',
+                //         src: './images/154518776962642834.png'
+                //     },
+                //     {
+                //         id: 1,
+                //         title: '分类',
+                //         src: './images/154518777766983546.png'
+                //     },
+                //     {
+                //         id: 2,
+                //         title: '必抢清单',
+                //         src: './images/154518778584812163.png'
+                //     },
+                //     {
+                //         id: 3,
+                //         title: '购物车',
+                //         src: './images/154518779385872504.png'
+                //     },
+                //     {
+                //         id: 4,
+                //         title: '我的易购',
+                //         src: './images/154518780211077845.png'
+                //     },
+                //
+                // ],
             }
         },
     }

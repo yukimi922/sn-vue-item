@@ -11,6 +11,9 @@
         components:{
             // eslint-disable-next-line vue/no-unused-components
             snFootItem
+        },
+        methods:{
+
         }
     }
 </script>

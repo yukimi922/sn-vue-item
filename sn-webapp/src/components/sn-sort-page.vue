@@ -108,7 +108,7 @@
                 goodsLIst:[
                     {
                         name:'热门搜索',
-                        id:0,
+                        id:1,
                         list:[
                             {
                                 gid:0,
@@ -123,7 +123,28 @@
                             {
                                 id:2,
                                 words:'洗衣机',
-                                src:'./images/1491712405935_pc_list.jpg'
+                                src:'./images/1493018450115_pc_list.jpg'
+                            }
+                        ]
+                    },
+                    {
+                        name:'手机数码',
+                        id:0,
+                        list:[
+                            {
+                                gid:0,
+                                src:'./images/1493946827440_app_list.jpg',
+                                words:'电脑'
+                            },
+                            {
+                                id:1,
+                                words:'paid',
+                                src:'./images/1493946924941_app_list.jpg'
+                            },
+                            {
+                                id:2,
+                                words:'数码',
+                                src:'./images/1493946999339_app_list.jpg'
                             }
                         ]
                     }
@@ -138,5 +159,4 @@
     .sn-sort{
         font-size: 0.16rem;
     }
-
 </style>

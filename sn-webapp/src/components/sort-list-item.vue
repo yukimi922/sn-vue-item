@@ -11,6 +11,7 @@
         methods:{
            fun(index){
                this.tag = index;
+               this.$bus.$emit('changeGoods',index)
            }
         },
         data(){

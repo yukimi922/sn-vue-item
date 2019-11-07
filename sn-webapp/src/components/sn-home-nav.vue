@@ -25,5 +25,6 @@
         font-size: 0.16rem;
         overflow: hidden;
         padding:0 0  0.1rem 0;
+        text-align: center;
     }
 </style>

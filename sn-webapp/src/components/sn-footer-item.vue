@@ -8,7 +8,12 @@
 <script>
     export default {
         name: "sn-footer-item",
-        props:['data']
+        props:['data'],
+        data(){
+          return {
+              goto:''
+          }
+        },
     }
 </script>
 

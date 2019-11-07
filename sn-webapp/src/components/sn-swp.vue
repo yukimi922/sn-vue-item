@@ -25,7 +25,9 @@
                 pagination:{
                     el:'.swiper-pagination'
                 },
-                autoplay: true
+                autoplay: {
+                    disableOnInteraction: false
+                }
             })
         }
     }
