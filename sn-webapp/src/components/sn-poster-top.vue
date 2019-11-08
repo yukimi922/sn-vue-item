@@ -1,6 +1,6 @@
 <template>
     <div class="sn-post-top">
-        <img :src="data.src" alt="">
+        <img :src="data" alt="">
     </div>
 </template>
 

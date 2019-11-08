@@ -1,6 +1,6 @@
 <template>
-    <a href="#" class="home-footer-item">
-        <img :src="data.src" alt=""><br>
+    <a :href="data.goto" class="home-footer-item" @click="tag=true">
+        <img :src="tag?data.src:data.src2" alt=""><br>
         <span>{{data.title}}</span>
     </a>
 </template>
@@ -11,7 +11,7 @@
         props:['data'],
         data(){
           return {
-              goto:''
+              tag:false
           }
         },
     }
