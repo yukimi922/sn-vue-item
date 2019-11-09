@@ -1,25 +1,38 @@
+const BASEURL= 'http://localhost:3000'
 export default {
     async getHomeData () {
-        let res = await fetch('http://localhost:3000/sn')
+        let res = await fetch(`${BASEURL}/sn`)
         let data = await res.json()
         return data
     },
     async getSortData () {
         //取数据的时候根据路由取数据
-        let res = await fetch('http://localhost:3000/sn/sort')
+        let res = await fetch(`${BASEURL}/sn/sort`)
         let data = await res.json()
         return data
     },
     async getMustData () {
         //取数据的时候根据路由取数据
-        let res = await fetch('http://localhost:3000/sn/must')
+        let res = await fetch(`${BASEURL}/sn/must`)
         let data = await res.json()
         return data
     },
     async getCartData () {
         //取数据的时候根据路由取数据
-        let res = await fetch('http://localhost:3000/sn/cart')
+        let res = await fetch(`${BASEURL}/sn/cart`)
         let data = await res.json()
         return data
     },
+    async getOrderData () {
+        //取数据的时候根据路由取数据
+        let res = await fetch(`${BASEURL}/sn/order`)
+        let data = await res.json()
+        return data
+    },
+    async getGoodsData () {
+        //取数据的时候根据路由取数据
+        let res = await fetch(`${BASEURL}/sn/goods`)
+        let data = await res.json()
+        return data
+    }
 }

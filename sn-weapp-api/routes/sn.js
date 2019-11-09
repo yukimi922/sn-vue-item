@@ -5,6 +5,8 @@ const dataModel = require("../module/data");
 const snSort = require("../module/sortData")
 const snMust = require("../module/mustBuy")
 const snCart = require("../module/cartInfo")
+const snOrder = require('../module/orderList')
+const snGoods = require('../module/snGoodsList')
 // const classify =require("../module/model02");
 // const personalNews =require("../module/model04");
 //允许跨域设置
@@ -34,6 +36,14 @@ router.get("/must",(req,res)=>{
 
 router.get("/cart",(req,res)=>{
     res.json(snCart.getCartInfo())
+})
+
+router.get("/order",(req,res)=>{
+    res.json(snOrder.getOrderInfo())
+})
+
+router.get("/goods",(req,res)=>{
+    res.json(snGoods.getGoodsItem())
 })
 // router.get("/data",(req,res)=>{
 //     res.json(classify.getdata())

@@ -8,7 +8,7 @@
         </div>
 <!--        店铺信息-->
         <div class="sn-cart-products">
-            <sn-cart-products :data="data.shops"></sn-cart-products>
+            <sn-cart-products :data="data.shops" ></sn-cart-products>
         </div>
 <!--        没有更多了-->
         <div class="sn-cart-nomore">
@@ -36,7 +36,7 @@
               this.data = a
               // eslint-disable-next-line no-console
               console.log(this.data)
-            }
+            },
         },
         beforeMount() {
             this._initData()

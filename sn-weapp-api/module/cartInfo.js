@@ -2,6 +2,7 @@ module.exports = {
     getCartInfo(){
         let a = {
             checkedAll:true,
+            total:0,
             shops:[
                 {
                     name: '百草味官方旗舰店',

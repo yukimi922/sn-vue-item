@@ -19,55 +19,38 @@ let router = new VueRouter({
         {path:'/list',component:snMustBy},
         {path:'/cart',component:snCart},
         {path:'/login',component:snLigin},
-        {path:'/logon',component:snMyslef}
+        {path:'/logon',component:snMyslef, meta: {requireAuth: true,}}// 添加该字段，表示进入这个路由是需要登录的
     ]
 })
 
 router.beforeEach((to,from,next)=>{
     // eslint-disable-next-line no-console
-    console.log(to.path) // to from $route
+    //console.log(to.path) // to from $route
     // eslint-disable-next-line no-console
-    // console.log(from.path)
+    //console.log(from.path)
+    // const nextRoute = '/logon';
     let token = localStorage.getItem('token')
     // eslint-disable-next-line no-console
-    // console.log(token)
+    //console.log(token)
     next()
-    if (to.name === 'logon') {
-        if(token){
-            next()
-        }else{
-            alert('请登录')
-            next('/login')
+
+    if (to.meta.requireAuth) {//如果需要跳转 ，往下走（1）
+        if (token) {//判断是否登录过，如果有登陆过，说明有token,或者token未过期，可以跳过登录（2）
+            if (to.path === '/logon') {//判断下一个路由是否为要验证的路由（3）
+                next();// 如果是直接跳到首页，
+            } else {//如果该路由不需要验证，那么直接往后走
+                next();
+            }
+        } else {
+            // eslint-disable-next-line no-console
+            alert('请登录');//如果没有登陆过，或者token 过期， 那么跳转到登录页
+            next('/login');
         }
+    } else {                           //不需要跳转，直接往下走
+        next();
     }
+
 })
-
-
-// router.beforeEach((to, from, next) => {
-//     // to: Route: 即将要进入的目标 路由对象
-//     // from: Route: 当前导航正要离开的路由
-//     // next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。
-//     const nextRoute = ['login'];
-//     // 未登录状态；当路由到nextRoute指定页时，跳转至login
-//     let token = localStorage.getItem('token')
-//     if (nextRoute.indexOf(to.name) >= 0 && token) {
-//         next({
-//             path: '/login',
-//             // 将跳转的路由path作为参数，登录成功后跳转到该路由
-//             query: {redirect: to.fullPath}
-//         })
-//     }else{
-//         next();
-//     }
-//     // 已登录状态；当路由到login时，跳转至home
-//     if (to.name === 'login') {
-//         if (token) {
-//             // eslint-disable-next-line no-console
-//             console.log('已登录');
-//             router.push({ path: '/logon' });
-//         }
-//     }
-// });
 
 
 export default  router;

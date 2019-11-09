@@ -15,7 +15,7 @@
             </div>
             <div class="sn-tel">
 <!--                <label class="tel-label" for="tel">请输入手机号</label>-->
-                <input type="text" id="tel" placeholder="请输入手机号" ref="tel">
+                <input type="text" id="tel" placeholder="请输入手机号" v-model="num">
             </div>
             <!--            验证码-->
             <div class="sn-code">
@@ -26,7 +26,7 @@
                 <a>获取验证码</a>
             </div>
             <div class="sn-login-btn">
-                <a>登录</a>
+                <a @click="goto">登录</a>
             </div>
             <a class="login-for-id">账号密码登录</a>
         </div>
@@ -48,17 +48,24 @@
 <script>
     export default {
         name: "sn-login",
-        // methods:{
-        //     logon(){
-        //         if(){
-        //             localStorage.setItem('token',a);
-        //             this.$router.push('/logon')
-        //         }else{
-        //             alert('请输入手机号!')
-        //         }
-        //
-        //     }
-        // }
+        data(){
+          return{
+              num:null
+          }
+        },
+        methods:{
+            goto(){
+                // eslint-disable-next-line no-console
+                // console.log(this.num)
+                if(this.num){
+                    localStorage.setItem('token',this.num)
+                    this.$router.push('/logon')
+                }else{
+                    alert('请输入正确的手机号')
+                }
+            }
+        }
+
     }
 </script>
 

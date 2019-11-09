@@ -21,7 +21,7 @@ module.exports = {
             ],
             floor2:{
                 poster:'./images/154287636387505228.jpg',
-                desc:'走亲伴手礼,坚果礼盒乃是佳选!'
+                 desc:'走亲伴手礼,坚果礼盒乃是佳选!'
             },
             floor2Src:[
                 {
