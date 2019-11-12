@@ -1,5 +1,5 @@
 <template>
-    <a :href="data.goto" class="home-footer-item" @click="tag=true">
+    <a :href="data.goto" class="home-footer-item" @click="!tag">
         <img :src="tag?data.src:data.src2" alt=""><br>
         <span>{{data.title}}</span>
     </a>

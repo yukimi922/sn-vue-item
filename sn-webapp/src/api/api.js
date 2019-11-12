@@ -1,4 +1,4 @@
-const BASEURL= 'http://127.0.0.1:3000'
+const BASEURL= 'http://106.12.218.147:3000'
 export default {
     async getHomeData () {
         let res = await fetch(`${BASEURL}/sn`)

@@ -1,15 +1,16 @@
 <template>
     <div>
         <sn-home-head></sn-home-head>
-        <sn-swp :data="data.navInfo"></sn-swp>
+        <sn-swp :data="data"></sn-swp>
         <sn-home-nav :data="data.navs"></sn-home-nav>
         <sn-post-top :data="data.posterTop"></sn-post-top>
         <sn-home-poster :data="data.posterInfo"></sn-home-poster>
         <sn-home-new-user :data="data.newsInfo"></sn-home-new-user>
 <!--        商品列表-->
         <div class="sn-goods-list">
-            <sn-goods-page :data="goods.products"></sn-goods-page>
+            <sn-goods-page :data="goods"></sn-goods-page>
         </div>
+<!--        <router-view></router-view>-->
     </div>
 </template>
 
@@ -65,9 +66,9 @@
 
 <style scoped>
     .sn-goods-list{
-        width: 93%;
+        width: 100%;
         height: 6rem;
-        background-color: pink;
+        background-color: #F7F7F7;
         margin:0.1rem auto;
         font-size: 0.14rem;
     }

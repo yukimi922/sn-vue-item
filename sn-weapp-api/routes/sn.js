@@ -7,8 +7,7 @@ const snMust = require("../module/mustBuy")
 const snCart = require("../module/cartInfo")
 const snOrder = require('../module/orderList')
 const snGoods = require('../module/snGoodsList')
-// const classify =require("../module/model02");
-// const personalNews =require("../module/model04");
+
 //允许跨域设置
 
 router.all("*",(req,res,next)=>{
@@ -41,16 +40,8 @@ router.get("/cart",(req,res)=>{
 router.get("/order",(req,res)=>{
     res.json(snOrder.getOrderInfo())
 })
-
 router.get("/goods",(req,res)=>{
     res.json(snGoods.getGoodsItem())
 })
-// router.get("/data",(req,res)=>{
-//     res.json(classify.getdata())
-//     //{orders:orderarr}  绑定到order.ejs模板上
-// });
-// router.get("/personal",(req,res)=>{
-//     res.json(personalNews.getdata())
-// })
 
 module.exports = router;

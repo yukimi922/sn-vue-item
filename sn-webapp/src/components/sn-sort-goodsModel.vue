@@ -61,12 +61,13 @@
     }
     ul{
         width: 100%;
-        height: 2rem ;
-        /*background-color: pink;*/
         margin-top: 0.1rem;
         overflow: hidden;
         text-align: center;
         font-size: 0.14rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
     .goods-item{
         width: 30%;

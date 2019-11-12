@@ -21,6 +21,7 @@
         width: 100%;
         height: 0.5rem;
         background-color: #F8F8F8;
+        z-index: 10;
     }
     .sn-sort-back{
         display: block;

@@ -9,15 +9,25 @@
             <input type="text" placeholder="商品/店铺">
         </div>
 <!--&lt;!&ndash;        登录&ndash;&gt;-->
-        <div class="sn-home-head-login">
+        <a class="sn-home-head-login" @click="fun">
 
-        </div>
+        </a>
     </div>
 </template>
 
 <script>
     export default {
-        name: "sn-home-head"
+        name: "sn-home-head",
+        methods:{
+            fun(){
+                let token = localStorage.getItem('token')
+                if(token){
+                    this.$router.push('/logon')
+                }else{
+                    this.$router.push('/login')
+                }
+            }
+        }
     }
 </script>
 

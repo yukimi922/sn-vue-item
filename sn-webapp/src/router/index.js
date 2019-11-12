@@ -7,13 +7,22 @@ import snMustBy from '../components/sn-must-page'
 import snCart from '../components/sn-cart-page'
 import snLigin from '../components/sn-login'
 import snMyslef from '../components/sn-myslef'
+import snGoodsDetail from "../components/detail/detailPage"
+// import snGoodsList from "../components/sn-goods/sn-goods-page"
 Vue.use(VueRouter)
 
 let router = new VueRouter({
     //路由map的集合，path: views component
     routes:[
         {path:'/',redirect:'/home'},
-        {path:'/home',component:home},
+        {path:'/home',component:home,
+             // children: [
+             //     {path:'',component:snGoodsList},
+             //     {path: 'goods', component: snGoodsDetail},
+             // ]
+        },
+        {path: '/goods', component: snGoodsDetail},
+      //  {path:'/goods?id',component:snGoodsDetail},
         {path:'/info',component:NavInfo},
         {path:'/sort',component:snSortPage},
         {path:'/list',component:snMustBy},
@@ -24,14 +33,9 @@ let router = new VueRouter({
 })
 
 router.beforeEach((to,from,next)=>{
-    // eslint-disable-next-line no-console
-    //console.log(to.path) // to from $route
-    // eslint-disable-next-line no-console
-    //console.log(from.path)
-    // const nextRoute = '/logon';
+
     let token = localStorage.getItem('token')
-    // eslint-disable-next-line no-console
-    //console.log(token)
+
     next()
 
     if (to.meta.requireAuth) {//如果需要跳转 ，往下走（1）

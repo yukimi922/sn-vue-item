@@ -1,7 +1,7 @@
 <template>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <swp-item :key="i" v-for="(n,i) in data" :data="n"></swp-item>
+            <swp-item :key="i" v-for="(n,i) in data.navInfo" :data="n"></swp-item>
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>

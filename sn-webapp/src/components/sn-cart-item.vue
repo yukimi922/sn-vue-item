@@ -3,7 +3,7 @@
         <div class="shop-info">
             <div class="sn-shop-check">
                 <div class="check-img">
-                    <input type="checkbox" :ref="data.sid">
+                    <input type="checkbox">
                     <img src="../assets/images/select.png" alt="" class="shop-check" />
                 </div>
             </div>
@@ -21,7 +21,8 @@
                 </div>
             </div>
         </div>
-        <div :key="i" class="sn-goods-item" v-for="(n,i) in data.products" @click="detail(i)">
+<!--        <sn-goods-item :data="data.products"></sn-goods-item>-->
+        <div :key="i" class="sn-goods-item" v-for="(n,i) in data.products">
 <!--            商品单选框-->
             <div class="sn-goods-check">
                 <div class="check-single">
@@ -44,8 +45,8 @@
                         <p>￥{{n.price}}.<span>{{n.pr2}}</span></p>
                         <div class="goods-num">
                             <button>-</button>
-                            <input type="text" :value="n.total" :ref="n.pid">
-                            <button @click="add">+</button>
+                            <input type="text" :value="n.total">
+                            <button>+</button>
                         </div>
                     </div>
                 </div>
@@ -55,16 +56,22 @@
 </template>
 
 <script>
+    // import snGoodsItem from "./sn-goods-item"
     export default {
         name: "sn-cart-item",
         props:['data'],
-        methods:{
-            detail(){
-
-            },
-            add(){
-
+        data(){
+            return{
+                num:''
             }
+        },
+        components:{
+            // snGoodsItem
+        },
+        methods:{
+            // add(){
+            //         this.num++
+            // }
         }
     }
 </script>
